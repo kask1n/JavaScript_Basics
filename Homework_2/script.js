@@ -7,7 +7,20 @@
 
 console.log('-------------------');
 console.log('Homework 2. Task 1:');
-console.log('Object :>> ');
+
+let num1 = Number(prompt('Введите 1-ое число:'));
+let num2 = Number(prompt('Введите 2-ое число:'));
+if (num1 <= 1 && num2 >= 3) {
+  console.log('Оба числа корректны');
+} else if (num1 > 1 && num2 < 3) {
+  console.log('Оба числа НЕкорректны');
+} else if (num1 > 1) {
+  console.log('1-ое число НЕкорректно');
+} else if (num2 < 3) {
+  console.log('2-ое число НЕкорректно');
+} else {
+  console.log('Введены не числа');
+}
 
 /*
 Задание 2.
@@ -23,7 +36,10 @@ if (test === true) {
 
 console.log('-------------------');
 console.log('Homework 2. Task 2:');
-console.log('Object :>> ');
+
+let test = true;
+test === true ? console.log('+++') : console.log('---');
+
 console.log('-------------------');
 
 /*
@@ -33,7 +49,17 @@ console.log('-------------------');
 
 console.log('-------------------');
 console.log('Homework 2. Task 3:');
-console.log('Object :>> ');
+
+var day = Number(prompt('Введите целое число [1; 31]:'))
+
+if (day < 11) {
+  console.log('Число попадает в 1-ую декаду месяца');
+} else if (day < 21) {
+  console.log('Число попадает в 2-ую декаду месяца');
+} else {
+  console.log('Число попадает в 3-ю декаду месяца');
+}
+
 console.log('-------------------');
 
 /*
@@ -62,5 +88,13 @@ console.log('-------------------');
 
 console.log('-------------------');
 console.log('Homework 2. Task 4:');
-console.log('Object :>> ');
+
+var num = Number(prompt('Введите целое число [1; ∞]:'))
+
+var hundreds = Math.floor(num / 100) % 10;
+var tens = Math.floor(num / 10) % 10;
+var units = num % 10;
+
+console.log(`В числе ${num} количество сотен: ${hundreds}, десятков: ${tens}, единиц: ${units}`);
+
 console.log('-------------------');
