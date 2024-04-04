@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classwork_4</title>
+</head>
+
+<body>
+  <script>
+    const array = [1, 2, 3, 4];
+    for (let i = 0; i < array.length; i++) {
+      console.log(array[i]);
+    }
+
+    console.log(array.length);
+
+    const arra = ['a', 'b', 'c'];
+    arra[0] = 1;
+    arra[1] = 2;
+    arra[2] = 3;
+    console.log(arra);
+
+
+
+    const arr = [1, 2, 3];
+    for (let i = 0; i < arr.length; i++) {
+      arr[i]++;
+    }
+    console.log(arr);
+
+    const ar = [];
+    ar[3] = 'a';
+    ar[8] = 'b';
+    console.log(ar);
+
+    const a = [1, 2, 3];
+    a[3] = 4;
+    a[4] = 5;
+    a.push(6, 7);
+    console.log(a);
+
+    a.pop()
+    a.shift()
+    console.log(a);
+
+
+
+    for (let j = 11; j <= 33; j++) {
+      console.log(j);
+    }
+
+    for (let k = 1; k < 100; k = k + 2) {
+      console.log(k);
+    }
+
+    for (let l = 100; l >= 0; l--) {
+      console.log(l);
+    }
+
+    let num = 50;
+    console.log(`num = ${num}`);
+    let count = 0;
+    do {
+      num *= 3;
+      console.log(num);
+      count++;
+    } while (num <= 1000);
+    console.log(`count = ${count}`);
+
+
+
+    const brr = [2, 5, 9, 15, 1, 4];
+    for (let m = 0; m < brr.length; m++) {
+      if (brr[m] > 3 && brr[m] < 10) {
+        console.log(brr[m]);
+      }
+    }
+
+    let sum = 0;
+    for (let n = 2; n <= 100; n += 2) {
+      sum += n;
+    }
+    console.log(sum);
+
+    const crr = [2, 5, 9, 3, 1, 4];
+    let crrSum = 0;
+    for (let o = 0; o < crr.length; o++) {
+      const element = crr[o];
+      crrSum += element;
+    }
+    console.log(crrSum);
+
+    let str = '-';
+    for (let p = 1; p <= 9; p++) {
+      str += p + '-';
+    }
+    console.log(str);
+
+    const drr = [2, 5, 9, 0, 3, 1, 4];
+    for (let q = 0; q < drr.length; q++) {
+      console.log(drr[q]);
+      if (drr[q] === 0) {
+        break;
+      }
+    }
+
+
+
+    const err = [2, 5, 9, 0, 3, 1, 4, 2, 5, 9];
+    for (let r = 0; r < err.length; r++) {
+      if (err[r] % 2 === 0) {
+        err[r] = err[r] ** 2;
+      } else if (err[r] % 3 === 0) {
+        err[r] = err[r] ** 3;
+      }
+    }
+    console.log(err);
+
+    const frr = [1, 2, 3, 2, 4, 3, 5, 6, 3, 2, 3];
+    countOfThree = 0;
+    frr.forEach(element => {
+      if (element === 3) {
+        countOfThree++;
+      }
+    });
+    console.log(countOfThree);
+
+    const grr = [1, 2, 3, 4, 5];
+    grr.splice(1, 2);
+    console.log(grr);
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
