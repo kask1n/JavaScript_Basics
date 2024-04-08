@@ -91,14 +91,12 @@ prods.forEach(element => {
 console.log(prods);
 
 /*
-Задание 4.
-1. Необходимо вывести в консоль массив продуктов, в которых есть хоть одна фотография, используя метод filter. Исходные данные - массив products.
-
-2. Необходимо отсортировать массив products используя метод sort по цене, начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести отсортированный массив в консоль.
+Задание 4-1.
+Необходимо вывести в консоль массив продуктов, в которых есть хоть одна фотография, используя метод filter. Исходные данные - массив products.
 */
 
 console.log('-------------------');
-console.log('Homework 5. Task 4:');
+console.log('Homework 5. Task 4-1:');
 
 const products = [
   {
@@ -129,6 +127,29 @@ const products = [
 
 let productsWithPhoto = products.filter(item => item.photos && item.photos.length > 0)
 console.log(productsWithPhoto);
+
+/*
+Задание 4-2.
+Необходимо отсортировать массив products используя метод sort по цене, начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести отсортированный массив в консоль.
+*/
+
+console.log('-------------------');
+console.log('Homework 5. Task 4-2:');
+
+const comparePrices = (a, b) => {
+  if (a.price < b.price) {
+    return -1;
+  }
+
+  if (a.price > b.price) {
+    return 1;
+  }
+
+  return 0;
+}
+
+products.sort(comparePrices);
+console.log(products);
 
 /*
 Задание 5.
