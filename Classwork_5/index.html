@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classwork_5</title>
+</head>
+
+<body>
+  <script>
+    // const week = {
+    //   1: 'Понедельник',
+    //   2: 'Вторник',
+    //   3: 'Среда',
+    //   4: 'Четверг',
+    //   5: 'Пятница',
+    //   6: 'Суббота',
+    //   7: 'Воскресенье'
+    // }
+    // console.log(week[1]);
+
+
+    // const user = {
+    //   name: 'John',
+    //   surname: 'Ka',
+    //   age: 30
+    // }
+    // console.log(`${user.name} - ${user.surname} - ${user.age}`);
+
+    // user.patronymic = prompt('Отчество');
+    // console.log(user);
+
+    // delete user.surname;
+    // console.log(user);
+
+
+
+    // const arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+    // const arr2 = [1, 2, 3, 4, 5, 6, 7];
+
+    // if (arr1.length === arr2.length) {
+    //   const week_new = {};
+    //   for (let i = 0; i < arr1.length; ++i) {
+    //     week_new[arr1[i]] = arr2[i];
+    //   }
+    //   console.log(week_new);
+    // } else {
+    //   console.log('>>> Массивы не равны.');
+    // }
+
+
+    // const obj = {
+    //   x: 1,
+    //   y: 2,
+    //   z: 3
+    // };
+    // console.log(obj);
+
+    // for (const item in obj) {
+    //   obj[item] = obj[item] ** 2;
+    // }
+    // console.log(obj);
+
+
+
+    // const obj_new = {
+    //   key1: {
+    //     key1: 1,
+    //     key2: 2,
+    //     key3: 3
+    //   },
+    //   key2: {
+    //     key1: 4,
+    //     key2: 5,
+    //     key3: 6
+    //   },
+    //   key3: {
+    //     key1: 7,
+    //     key2: 8,
+    //     key3: 9
+    //   },
+    // }
+
+    // let sum = 0;
+    // for (const keyUp in obj_new) {
+    //   for (const keyIn in obj_new[keyUp]) {
+    //     sum += obj_new[keyUp][keyIn];
+    //   }
+    // }
+    // console.log(sum);
+
+
+
+    const riddles = {
+      question: 'Зимой и летом одним цветом?',
+      answer: new Set([
+        'ёлка',
+        'ель',
+        'елка'
+      ]),
+      hints: {
+        1: '(Зелёная)',
+        2: '(В лесу)'
+      },
+      askQuestion() {
+        let flag = 0;
+        let userAnswer = prompt(this.question);
+        userAnswer = userAnswer.toLocaleLowerCase();
+        if (this.answer.has(userAnswer)) {
+          flag = 1;
+        } else {
+          for (const key in this.hints) {
+            userAnswer = prompt(`${this.question} ${this.hints[key]}`).toLocaleLowerCase();
+            if (this.answer.has(userAnswer)) {
+              flag = 1;
+              break;
+            }
+          }
+        }
+
+        if (flag) {
+          console.log('Молодец!');
+        } else {
+          console.log('Вы проиграли.');
+        }
+      }
+    };
+
+    riddles.askQuestion();
+    console.log(riddles);
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
